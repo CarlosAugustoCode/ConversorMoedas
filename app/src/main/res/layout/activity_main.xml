@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="780dp" android:id="@+id/constraintLayout" app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/quanto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_titulo" android:fontFamily="monospace"
+                android:textSize="24sp" android:textColor="#3F51B5" android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txt_resultado"/>
+        <EditText
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_valor"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+                app:layout_constraintBottom_toTopOf="@+id/radio_opcoes" app:layout_constraintVertical_bias="0.239"/>
+        <RadioGroup
+                android:layout_width="67dp"
+                android:layout_height="142dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/radio_opcoes"
+                app:layout_constraintHorizontal_bias="0.511" tools:layout_editor_absoluteY="289dp">
+            <RadioButton
+                    android:text="CLP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_clp"
+            />
+            <RadioButton
+                    android:text="EUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_EUR"
+            />
+            <RadioButton
+                    android:text="USD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_USD"
+            />
+        </RadioGroup>
+        <Button
+                android:text="CONVERTER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_converter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintTop_toBottomOf="@+id/radio_opcoes"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.271"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_resultado"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="138dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+                android:textSize="34sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
